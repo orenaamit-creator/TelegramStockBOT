@@ -1,0 +1,46 @@
+Telegram Bot
+
+Step 1 - python
+Check that you have python by running: python --version (Should be 3.9 and advanced)
+
+Step 2 - install pyTelegramBotAPI
+Run pip install pyTelegramBotAPI from your command line
+
+Step 3 - Create a telegram Bot
+Open telegram and look for @BotFather
+Send /newbot
+Give the bot a new and description (orenGPT)and (orenGPTbot)
+Get a token (Save it aside)(8176515312:AAF3ba9iwCZe9oemLRmP-y4GLvAhrixd0u8)
+
+Step 4 - Create a new bot
+Create a new file name bot.py
+import telebot
+
+# הכנס כאן את הטוקן שלך
+API_TOKEN = 'הכנס_כאן_את_הטוקן_שלך'
+bot = telebot.TeleBot(API_TOKEN)
+
+# האזנה להודעות טקסט
+@bot.message_handler(func=lambda message: True)
+def echo_all(message):
+    bot.reply_to(message, message.text)
+
+# הרצת הבוט
+print("הבוט פעיל! לחץ Ctrl+C כדי לעצור")
+bot.infinity_polling()
+
+Save the file
+
+מה זה עושה?
+כל הודעה שתשלח לבוט – הוא יחזיר לך את אותה ההודעה (Echo).
+
+The bot name is: @orenGPTbot
+API_TOKEN = '8176515312:AAF3ba9iwCZe9oemLRmP-y4GLvAhrixd0u8'
+TARGET_CHAT_ID = '470524502'
+
+
+
+Shopping bot:
+t.me/orenshoppinglist_bot
+token: 8073016151:AAGZBz-Ekt2Ve70yEhSb_QSEeA3hgGhgKpg
+
